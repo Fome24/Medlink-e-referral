@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Referral Form - Medlink e-Referral Services</title>
+    <style>
+        body {
+            background-color: #f3e5f5;
+            font-family: Arial, sans-serif;
+            color: #4a148c;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4a148c;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #d1c4e9;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #7b1fa2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #6a1b9a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medlink e-Referral Form</h1>
+        <p>Patient Name: John Smith</p>
+        <p>Date of Birth: January 1, 2000</p>
+        <form action="submit.html" method="post">
+            <label for="referring_doctor_name">Referring Doctor Name:</label>
+            <input type="text" id="referring_doctor_name" name="referring_doctor_name" required>
+            
+            <label for="contact_email">Contact Email:</label>
+            <input type="email" id="contact_email" name="contact_email" required>
+            
+            <label for="referral_date">Referral Date:</label>
+            <input type="date" id="referral_date" name="referral_date" required>
+            
+            <label for="referral_type">Referral Type:</label>
+            <select id="referral_type" name="referral_type" required>
+                <option value="new">New</option>
+                <option value="follow_up">Follow Up</option>
+            </select>
+            
+            <h2>Referral Recipient Information</h2>
+            <label for="recipient_name">Referral Recipient Name:</label>
+            <input type="text" id="recipient_name" name="recipient_name" required>
+            
+            <label for="designation_specialty">Designation/Specialty:</label>
+            <input type="text" id="designation_specialty" name="designation_specialty" required>
+            
+            <label for="health_institution_name">Health Institution Name:</label>
+            <input type="text" id="health_institution_name" name="health_institution_name" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <h2>Patient Details</h2>
+            <label for="clinical_information">Standard Clinical Information:</label>
+            <textarea id="clinical_information" name="clinical_information" rows="4" required></textarea>
+            
+            <label for="reason_for_referral">Reason for Referral:</label>
+            <textarea id="reason_for_referral" name="reason_for_referral" rows="4" required></textarea>
+            
+            <label for="priority_level">Priority Level:</label>
+            <input type="text" id="priority_level" name="priority_level" required>
+            
+            <label for="investigations_imaging">Investigations and Imaging:</label>
+            <textarea id="investigations_imaging" name="investigations_imaging" rows="4" required></textarea>
+            
+            <label for="supporting_documents">Supporting Documents:</label>
+            <textarea id="supporting_documents" name="supporting_documents" rows="4" required></textarea>
+            
+            <label for="flag_missing_information">Flag Missing Information:</label>
+            <select id="flag_missing_information" name="flag_missing_information">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <button type="submit">Submit Referral</button>
+        </form>
+    </div>
+</body>
+</html>
